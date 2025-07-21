@@ -20,6 +20,9 @@ Crie um programa em Java que:
 import java.util.Scanner;
 import java.util.ArrayList;
 
+import java.util.Scanner;
+import java.util.ArrayList;
+
 public class Main
 {
 	public static void main(String[] args) {
@@ -32,6 +35,7 @@ public class Main
 		System.out.println("Você vai te que digitar 2 notas para cada materia");
 		int notas[][] = new int[materias][2]; // Criando uma matriz
 		ArrayList<Integer> todas_notas = new ArrayList<>(); // Criando um lista de arrays para armazenar as notas
+		ArrayList<Integer> media_materia = new ArrayList<>();
 		for(int i = 0; i<materias ;i++){
 		    System.out.println("Materias" + (i+1) + ":");
 		    for(int j=0;j<2;j++){
@@ -40,13 +44,17 @@ public class Main
 		        todas_notas.add(notas[i][j]);
 		    }
 		}
-		System.out.println(todas_notas);
 		var media = 0;
-		for(int i=0;i < todas_notas.size();i++){
+		for(int i=0;i < todas_notas.size();i+=2){
+		    media_materia = (todas_notas.get(i) + todas_notas.get(i+1)) / 2;
+		    System.out.println(media_materia);
 		    media = todas_notas.get(i) / todas_notas.size();
 		    media = media + media;
 		}
-		
+		if(media > 6){
+		    System.out.printf("O %s foi aprovado :) \n",nome);
+		  }else{
+		      System.out.printf("O %s foi reprovado :( \n",nome);
+		  }
 	}
 }
-
