@@ -35,7 +35,8 @@ public class Main
 		System.out.println("Você vai te que digitar 2 notas para cada materia");
 		int notas[][] = new int[materias][2]; // Criando uma matriz
 		ArrayList<Integer> todas_notas = new ArrayList<>(); // Criando um lista de arrays para armazenar as notas
-		ArrayList<Integer> media_materia = new ArrayList<>();
+		//ArrayList<Integer> media_materia = new ArrayList<>();
+		var media_materia = 0;
 		for(int i = 0; i<materias ;i++){
 		    System.out.println("Materias" + (i+1) + ":");
 		    for(int j=0;j<2;j++){
