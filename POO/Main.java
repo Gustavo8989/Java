@@ -1,12 +1,21 @@
-public class Main{
 
+public class Main{
     public static void main(String[] args){
-        var male = new Person();
-        male.name = "joão";
-        male.age = 18;
-        var female = new Person();
-        female.name = "Isa";
-        female.age = 17;
-        
+        Carro meu_carro = new Carro("Fusca");
+        System.out.println(meu_carro);
+    }
+}
+
+class Carro {
+    String modelo;
+    public Carro(String modelo){
+        this.modelo = modelo;
+    }
+    private void acelerar(){
+        System.out.println("Acelerando o carro\n" + "Modelo do carro:" + this.modelo);
+    }
+    public void teste_private(){
+        Carro meu_carro = new Carro("Ford Ka");
+        meu_carro.acelerar();
     }
 }
