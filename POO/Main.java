@@ -1,12 +1,15 @@
 
+
+
 public class Main{
     public static void main(String[] args){
-        Carro meu_carro = new Carro("Fusca");
+        Carro meu_carro = new Sandeiro();
         System.out.println(meu_carro);
-    }
+        meu_carro.acelerar();
+    } 
 }
 
-class Carro {
+/*class Carro {
     String modelo;
     public Carro(String modelo){
         this.modelo = modelo;
@@ -18,4 +21,4 @@ class Carro {
         Carro meu_carro = new Carro("Ford Ka");
         meu_carro.acelerar();
     }
-}
+}*/
